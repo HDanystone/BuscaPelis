@@ -1,0 +1,6 @@
+export const FILTRAR = 'FILTRAR'
+export const ORDENAR = 'ORDENAR'
+export const AGREGAR_PELI = 'AGREGAR_PELI'
+export const QUITAR_PELI = 'QUITAR_PELI'
+export const ANTERIOR = 'ANTERIOR'
+export const SIGUIENTE = 'SIGUIENTE'
