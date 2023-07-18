@@ -1,18 +1,24 @@
-import { AGREGAR_PELI, QUITAR_PELI, ANTERIOR, SIGUIENTE, FILTRAR, ORDENAR } from "./actionTypes";
+import { HAY_BUSQUEDA, AGREGAR_PELIS, AGREGAR_PELI, ELIMINAR_PELI, ANTERIOR, SIGUIENTE, FILTRAR, ORDENAR } from "./actionTypes";
 
-export function  agregarPeli(peli) {
+export function  agregarPelis(pelis) {
+    return {
+      type: AGREGAR_PELIS,
+      payload: pelis
+    }
+  } 
+
+  export function  agregarPeli(peli) {
     return {
       type: AGREGAR_PELI,
       payload: peli
     }
-  }
-
-  export function  quitarPeli(id) {
-    return {
-      type: QUITAR_PELI,
-      payload: id
-    }
   } 
+
+  export function  eliminarPeli() {
+    return {
+      type: ELIMINAR_PELI,
+    }
+  }
 
   export function  filtrar(filtro) {
     return {
@@ -30,12 +36,18 @@ export function  agregarPeli(peli) {
 
   export function  anterior() {
     return {
-      type: ANTERIOR,
+      type: ANTERIOR
     }
   }
   
   export function  siguiente() {
     return {
       type: SIGUIENTE
+    }
+}
+export function hayBusqueda(busqueda) {
+  return {
+    type: HAY_BUSQUEDA,
+    payload: busqueda
     }
   }
