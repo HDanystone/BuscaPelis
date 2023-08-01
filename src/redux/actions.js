@@ -1,53 +1,62 @@
-import { HAY_BUSQUEDA, AGREGAR_PELIS, AGREGAR_PELI, ELIMINAR_PELI, ANTERIOR, SIGUIENTE, FILTRAR, ORDENAR } from "./actionTypes";
+import {
+    HAY_BUSQUEDA,
+    AGREGAR_PELIS,
+    AGREGAR_PELI,
+    ELIMINAR_PELI,
+    ANTERIOR,
+    SIGUIENTE,
+    FILTRAR,
+    ORDENAR
+} from './actionTypes'
 
-export function  agregarPelis(pelis) {
+export function agregarPelis(pelis) {
     return {
-      type: AGREGAR_PELIS,
-      payload: pelis
+        type: AGREGAR_PELIS,
+        payload: pelis
     }
-  } 
+}
 
-  export function  agregarPeli(peli) {
+export function agregarPeli(peli) {
     return {
-      type: AGREGAR_PELI,
-      payload: peli
+        type: AGREGAR_PELI,
+        payload: peli
     }
-  } 
+}
 
-  export function  eliminarPeli() {
+export function eliminarPeli() {
     return {
-      type: ELIMINAR_PELI,
+        type: ELIMINAR_PELI
     }
-  }
+}
 
-  export function  filtrar(filtro) {
+export function filtrar(filtro) {
     return {
-      type: FILTRAR,
-      payload: filtro
+        type: FILTRAR,
+        payload: filtro
     }
-  }
+}
 
-  export function  ordenar(orden) {
+export function ordenar(orden) {
     return {
-      type: ORDENAR,
-      payload: orden
+        type: ORDENAR,
+        payload: orden
     }
-  }
+}
 
-  export function  anterior() {
+export function anterior() {
     return {
-      type: ANTERIOR
+        type: ANTERIOR
     }
-  }
-  
-  export function  siguiente() {
+}
+
+export function siguiente() {
     return {
-      type: SIGUIENTE
+        type: SIGUIENTE
     }
 }
 export function hayBusqueda(busqueda) {
-  return {
-    type: HAY_BUSQUEDA,
-    payload: busqueda
+    return {
+        type: HAY_BUSQUEDA,
+        payload: busqueda
     }
-  }
+}
