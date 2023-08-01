@@ -10,7 +10,7 @@
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "homepage": "https://hdanystone.github.io/buscadorPeliculas/"
+    "homepage": "https://hdanystone.github.io/BuscaPelis/"
   },
   "dependencies": {
     "react": "^18.2.0",
