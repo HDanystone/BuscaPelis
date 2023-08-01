@@ -1,4 +1,4 @@
-export const APIKEY = //su APIKey
+export const APIKEY = '7d0a55da'
 export const URLBASE = 'http://www.omdbapi.com/?apikey='
 export const ID = '&i='
 export const TITULO = '&t='
