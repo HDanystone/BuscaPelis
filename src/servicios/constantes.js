@@ -1,5 +1,5 @@
-export const APIKEY = '7d0a55da'
-export const URLBASE = 'http://www.omdbapi.com/?apikey='
+export const APIKEY = ''
+export const URLBASE = 'https://www.omdbapi.com/?apikey='
 export const ID = '&i='
 export const TITULO = '&t='
 export const BUSQUEDA = '&s='

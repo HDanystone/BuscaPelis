@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap');
-
-body{ 
+body {
   margin: 0;
   padding: 0;
-  width:  100%;
+  width: 100%;
   height: 100%;
   background-color: rgb(2, 2, 9);
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
-.barraNavegar{
+
+.barraNavegar {
   width: 100%;
   height: 50px;
   background-size: contain;
@@ -20,10 +21,10 @@ html{
   flex-direction: row-reverse;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-bottom: 65px;
+  margin-bottom: 50px;
 }
 
-.peliculas{
+.peliculas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   justify-content: space-between;
@@ -31,9 +32,10 @@ html{
   justify-items: center;
   width: 100%;
   gap: 40px;
-  margin-top: 25px;
+  margin-top: 40px;
 }
-.main{
+
+.main {
   display: flex;
   justify-content: flex-start;
   width: 100%;
@@ -42,6 +44,7 @@ html{
   align-items: center;
   color: rgb(157, 123, 79);
   min-height: 700px;
+
 }
 
 .pelicula {
@@ -50,38 +53,43 @@ html{
   margin-top: 20px;
   margin-bottom: 40px;
   flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
 
 }
-.pelicula:hover{
+
+.pelicula:hover {
   background-color: #232535;
   transform: scale(1.12);
   cursor: pointer;
 }
-.pelicula img{
+
+.pelicula img {
   max-width: 100%;
   max-height: 100%;
   height: auto;
   width: auto;
 }
-.barraBuscar{
+
+.barraBuscar {
   display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-top: 14px;
-    width: auto;
-    align-items: flex-start;
-    margin-right: 20px;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 14px;
+  width: auto;
+  align-items: flex-start;
+  margin-right: 20px;
 }
-.buscar{
+
+.buscar {
   width: 100%;
   display: flex;
   gap: 16px;
   justify-content: flex-end;
   align-items: center;
 }
-.contenedorLista{
+
+.contenedorLista {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -91,122 +99,156 @@ html{
   text-overflow: ellipsis;
   width: 192px;
   background-color: rgb(2, 2, 9);
-  z-index: 1;  
+  z-index: 1;
 }
-.listaBusqueda{
+
+.listaBusqueda {
   display: flex;
-    list-style-type: disc;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 1px;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    font-size: small;
-    
+  list-style-type: disc;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 1px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: small;
+
 }
-a{text-overflow: ellipsis;}
-.listaBusqueda a:hover{
+
+a {
+  text-overflow: ellipsis;
+}
+
+.listaBusqueda a:hover {
   background-color: rgb(58, 84, 102);
   cursor: pointer;
 }
-.detalle{
-  min-height: 450px;
-  width: 700px;
+
+.detalle.visible {
+  z-index: 90;
   display: flex;
+  top: 0;
+  left: 0;
+  min-height: 450px;
   justify-content: space-evenly;
   align-items: center;
-  position:relative;
+  position: fixed;
   padding: 30px 30px;
-  top: 80px;
   margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(2, 2, 9);
 }
-.detalle img{
+
+.detalle {
+
+  display: none;
+}
+
+.detalle img {
   margin-right: 40px;
 }
-.detalle:hover{
-  background-color: #232535;
-  transition: background-color 300ms 0s ease-out;
+
+.det {
+  display: flex;
+}
+
+.det:hover {
+  transform: scale(1.12);
+
   cursor: pointer;
 }
-.info{
+
+.info {
   width: 100%;
   height: 100px;
   padding: 15px 19px 20px;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
-.titulo{
+
+.titulo {
   font-size: 18px;
 }
-.año{
-  font-weight:100;
+
+.año {
+  font-weight: 100;
 }
-.titulo, .año{
-  font-weight:300;
+
+.titulo,
+.año {
+  font-weight: 300;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
-.paginado{
+.paginado {
   gap: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 30px;
-    margin-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 80px;
 }
-.pag{
+
+.pag {
   width: 150px;
   text-align: center;
 }
-.botones{ 
+
+.botones {
   width: 90px;
   border: 2px solid;
   padding: 6px 8px;
- border-color: rgb(2, 2, 9);
+  border-color: rgb(2, 2, 9);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 3px;
 }
-.botones:active{
+
+.botones:active {
   background-color: #09f;
 }
-.activos{ 
-border-color:  #232535;
- background-color: #232535;
+
+.activos {
+  border-color: #232535;
+  background-color: #232535;
 }
-.activos:hover{
+
+.activos:hover {
   cursor: pointer;
-  background-color:rgb(2, 2, 9);
- 
-  border-color:  rgb(157, 123, 79); ;
+  background-color: rgb(2, 2, 9);
+
+  border-color: rgb(157, 123, 79);
+  ;
 }
-.spinnercontainer{
+
+.spinnercontainer {
   width: 100%;
-    height: 360px;
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  height: 360px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
+
 .spinner {
   border: 4px solid rgba(105, 57, 211, 0.1);
   width: 36px;
   height: 36px;
   border-radius: 50%;
   border-left-color: #09f;
-  position:absolute;
+  position: absolute;
   margin: 0 auto;
   animation: spin .8s ease-out infinite;
 }

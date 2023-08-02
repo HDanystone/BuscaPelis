@@ -23,7 +23,6 @@ export function BarraBuscar() {
     }
 
     const handleSubmit = (event) => {
-        console.log(event)
         event.preventDefault()
         dispatch(hayBusqueda({ palabraClave: queBuscar, buscando: true }))
         setQueBuscar('')

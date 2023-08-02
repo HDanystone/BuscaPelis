@@ -1,15 +1,14 @@
 import { buscarDetalle } from '../servicios/buscarDetalle'
-import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { agregarPeli } from '../redux/actions'
 
 export function Pelicula({ peli }) {
     const { title, year, id, image } = peli
-    const navigate = useNavigate()
     const dispatch = useDispatch()
 
     const handleClick = async (id) => {
-        navigate('/Detalle')
+        const detalle = document.getElementById('detalle')
+        detalle.classList.toggle('visible')
         window.scrollTo(0, 0)
         const detallePeli = await buscarDetalle(id)
         dispatch(agregarPeli(detallePeli))

@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { eliminarPeli } from '../redux/actions'
 
@@ -8,11 +6,11 @@ export function Detalle() {
 
     const { title, year, rated, runtime, genre, director, actors, image, language, awards } =
         detallePeli
-    const navigate = useNavigate()
     const dispatch = useDispatch()
 
     const handleClick = () => {
-        navigate('/')
+        const detalle = document.getElementById('detalle')
+        detalle.classList.toggle('visible')
         dispatch(eliminarPeli())
         detallePeli = {}
     }
@@ -20,11 +18,11 @@ export function Detalle() {
     const aunNoCargo = Object.keys(detallePeli).length === 0
 
     return (
-        <div className='detalle' onClick={handleClick}>
+        <div id='detalle' className='detalle' onClick={handleClick}>
             {aunNoCargo ? (
                 <div className='spinner' />
             ) : (
-                <>
+                <div className='det'>
                     <img src={image} />
                     <div>
                         <h4>Título: {title}</h4>
@@ -37,7 +35,7 @@ export function Detalle() {
                         <p>Idiomas: {language}</p>
                         <p>Premios: {awards}</p>
                     </div>
-                </>
+                </div>
             )}
         </div>
     )

@@ -1,6 +1,5 @@
 import './App.css'
 import { useSelector, useDispatch } from 'react-redux'
-import { Routes, Route } from 'react-router-dom'
 import { BarraNavegar } from './Componentes/BarraNavegar'
 import { Detalle } from './Componentes/Detalle'
 import { Peliculas } from './Componentes/Peliculas'
@@ -38,29 +37,20 @@ function App() {
 
     return (
         <>
-            <Routes>
-                <Route
-                    path='/'
-                    element={
-                        <>
-                            <BarraNavegar />
-                            <Peliculas
-                                peliculasAMostrar={peliculasAMostrar}
-                                buscando={buscando}
-                                yaSeBusco={yaSeBusco}
-                                totalResultados={totalResultados}
-                            />
-                            <Paginado
-                                cantidadPaginas={cantidadPaginas}
-                                deboBuscarPelis={deboBuscarPelis}
-                                paginaActual={paginaActual}
-                                yaSeBusco={yaSeBusco}
-                            />
-                        </>
-                    }
-                />
-                <Route path='/Detalle' element={<Detalle />} />
-            </Routes>
+            <BarraNavegar />
+            <Peliculas
+                peliculasAMostrar={peliculasAMostrar}
+                buscando={buscando}
+                yaSeBusco={yaSeBusco}
+                totalResultados={totalResultados}
+            />
+            <Paginado
+                cantidadPaginas={cantidadPaginas}
+                deboBuscarPelis={deboBuscarPelis}
+                paginaActual={paginaActual}
+                yaSeBusco={yaSeBusco}
+            />
+            <Detalle />
         </>
     )
 }
